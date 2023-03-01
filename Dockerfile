@@ -10,4 +10,4 @@ RUN echo "mv proot parrot-amd64/proot && chmod +x proot && chmod 755 proot" >> /
 RUN echo "mv tmate parrot-amd64/tmate && chmod +x tmate && chmod 755 tmate" >> /Parrot.sh
 RUN echo "./parrot-amd64/proot -S . ./tmate -F" >> /Parrot.sh
 RUN chmod 755 Parrot.sh
-ENTRYPOINT ["./Parrot.sh"]
+CMD ./Parrot.sh
