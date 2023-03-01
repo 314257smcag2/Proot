@@ -9,7 +9,9 @@ RUN wget https://github.com/tmate-io/tmate/releases/download/2.4.0/tmate-2.4.0-s
 RUN mv proot parrot-amd64/proot
 RUN mv tmate parrot-amd64/tmate
 RUN echo "tar -xf Parrot-rootfs-5.2_amd64.tar.xz" >> /Parrot.sh
-RUN echo "./parrot-amd64/proot -S . ./tmate -F" >> /Parrot.sh
+RUN echo "ls" >> /Parrot.sh
+RUN echo "cd parrot-amd64 && ls" >> /Parrot.sh
+RUN echo "./proot -S . ./tmate -F" >> /Parrot.sh
 RUN chmod 755 parrot-amd64/proot
 RUN chmod 755 parrot-amd64/tmate
 RUN chmod 755 Parrot.sh
