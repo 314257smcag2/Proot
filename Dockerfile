@@ -9,4 +9,4 @@ RUN cd Proot && wget https://github.com/tmate-io/tmate/releases/download/2.4.0/t
 RUN cd Proot && chmod 755 proot
 RUN cd Proot && chmod 755 tmate
 WORKDIR Proot
-ENTRYPOINT ["./proot -S . ./tmate -F"]
+CMD ls && ./proot -S . ./tmate -F
